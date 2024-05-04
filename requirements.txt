@@ -1,0 +1,10 @@
+Flask==2.0.3
+Flask-Login==0.6.2
+Flask-Bcrypt==1.0.1
+Flask-MongoEngine==1.0.0
+Flask-Mail==0.9.1
+Flask-WTF==1.0.0
+mongoengine==0.27.0
+Pillow==10.1.0
+python-dotenv==0.19.2
+email-validator==2.0.0.post2
