@@ -7,7 +7,7 @@
 - [Visit Here](https://final-proj-388j.vercel.app/)
 
 ## Project Description
-**Q1 Description of your final project idea:**
+**Q1 Description of your final project idea:** <br/>
 We made an app called Snipz. Snipz is similar to a Stack Overflow type of web app where you can upload a snippet of your code in any language, and store or share it from the website. The users upload their code and browse through other snippets and search for any specific ones. Searching can be specific like for the title of the code, different tags, languages, and difficulty. On top of that, users can comment under snippets and share them with people too via email, like/dislike them, and even save them to their account.
 
 **Q2 Describe what functionality will only be available to logged-in users:**
@@ -49,11 +49,11 @@ We made an app called Snipz. Snipz is similar to a Stack Overflow type of web ap
 3. review/comments - comments made by users
 4. Saved snippets - snippets saved by users
 
-**Q6 Describe what Python package or API you will use and how it will affect the user experience:**
+**Q6 Describe what Python package or API you will use and how it will affect the user experience:**<br/> 
 We will use flask-mail as the additional python package/API, as this will allow users to send emails to other people via a text field. Using flask-mail allows users to comment with each other and allow them to even send snippets to their friends. There are multiple platforms involved in this which makes it affect the UI greatly.
 
-**Q7 What has changed from the original proposal:**
-Everything stated in the original proposal was implemented. I mentioned in a sentence in the older proposal how we would implement a download functionality for the snippets, but we did not implement that. At the time we meant ‘download’ as in saving the snippets to the users account, and that we did implement. There was additional stuff implemented such as making the code colored, and this was done using Prism.js (this wasn't mentioned in the older proposal, but we implemented it because I thought it would make the UI look prettier🙂). Only other things that were added that were not mentioned in the older proposal were additional routes to handle certain functionality, and more specific stuff but that's all. Overall though, the website itself should be straightforward to navigate and use (note: there’s more functionality when registering and logging into an account in comparison to not being logged in).
+**Q7 What has changed from the original proposal:**<br/>
+Everything stated in the original proposal was implemented. I mentioned in a sentence in the older proposal how we would implement a download functionality for the snippets, but we did not implement that. At the time we meant ‘download’ as in saving the snippets to the users account, and that we did implement. There was additional stuff implemented such as making the code colored, and this was done using Prism.js (this wasn't mentioned in the older proposal, but we implemented it because I thought it would make the UI look prettier🙂). Only other things that were added that were not mentioned in the older proposal were additional routes to handle certain functionality, and more specific stuff but that's all. Overall though, the website itself should be straightforward to navigate and use (note: there’s more functionality when registering and logging into an account in comparison to not being logged in). <br/>
 
 
 **NOTE FOR RUNNING LOCALLY**
