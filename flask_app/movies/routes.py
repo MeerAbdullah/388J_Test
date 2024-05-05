@@ -158,7 +158,6 @@ def send_email(snippet_id):
         msg = Message('You received a new Code Snippet!',
                       sender=os.environ.get('MAIL_USERNAME'),
                       recipients=[recipient_email])
-        
         snippet_url = url_for('snippets.snippet_detail', snippet_id=snippet_id, _external=True)
         msg.body = f"Here's a link to the code snippet!\n\nTitle: {snippet.title}\n\nURL: {snippet_url}"
         mail.send(msg)
