@@ -156,7 +156,7 @@ def send_email(snippet_id):
     if share_form.validate_on_submit():
         recipient_email = request.form['email']
         msg = Message('You received a new Code Snippet!',
-                      sender=app.config['MAIL_USERNAME'],
+                      sender=os.environ.get('MAIL_USERNAME'),
                       recipients=[recipient_email])
         msg.body = f"Here's a code snippet titled {snippet.title}:\n\n{snippet.code}"
         mail.send(msg)
