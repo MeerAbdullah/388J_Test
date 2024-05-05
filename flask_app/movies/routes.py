@@ -151,6 +151,10 @@ def dislike_snippet(snippet_id):
 def send_email(snippet_id):
     mail = Mail(app)
 
+    print('EMAIL:', os.environ.get('MAIL_USERNAME'))
+    print('PASSWORD:', os.environ.get('MAIL_PASSWORD'))
+    print('SENDING TO:', request.form['email'])
+    
     snippet = CodeSnippet.objects(id=snippet_id).first()
     share_form = ShareSnippetForm()
     if share_form.validate_on_submit():
