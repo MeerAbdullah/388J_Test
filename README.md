@@ -5,6 +5,7 @@
 
 ## Deployed Website
 - [Visit Here](https://final-proj-388j.vercel.app/)
+- **Note**: The website here says it failed to build, but it is up. The link still works.
 
 ## Project Description
 **Q1 Description of your final project idea:** <br/>
