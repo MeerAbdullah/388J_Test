@@ -63,9 +63,7 @@ def upload_snippet():
             difficulty=form.difficulty.data
         )
         snippet.save()
-        share_form = ShareSnippetForm()
-        form2 = SnippetReviewForm()
-        return render_template("snippet_display.html", share_form=share_form, form=form2, snippet=snippet)
+        return redirect(url_for('snippets.snippet_detail', snippet_id=snippet.id))
 
     for f, err in form.errors.items():
         for e in err:
@@ -98,7 +96,7 @@ def snippet_detail(snippet_id):
                 'image': get_b64_img(review.commenter.username)
             } for review in review_objects]
 
-    return render_template( "snippet_display.html", form=form, share_form=share_form, snippet=snippet, reviews=reviews)
+    return render_template("snippet_display.html", form=form, share_form=share_form, snippet=snippet, reviews=reviews)
 
 @snippets.route("/user/<username>")
 def user_detail(username):
