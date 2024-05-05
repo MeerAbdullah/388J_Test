@@ -151,10 +151,6 @@ def dislike_snippet(snippet_id):
 def send_email(snippet_id):
     mail = Mail(app)
 
-    print('EMAIL:', os.environ.get('MAIL_USERNAME'))
-    print('PASSWORD:', os.environ.get('MAIL_PASSWORD'))
-    print('SENDING TO:', request.form['email'])
-    
     snippet = CodeSnippet.objects(id=snippet_id).first()
     share_form = ShareSnippetForm()
     if share_form.validate_on_submit():
@@ -162,7 +158,8 @@ def send_email(snippet_id):
         msg = Message('You received a new Code Snippet!',
                       sender=os.environ.get('MAIL_USERNAME'),
                       recipients=[recipient_email])
-        msg.body = f"Here's a code snippet titled {snippet.title}:\n\n{snippet.code}"
+        snippet_url = url_for('snippets.snippet_detail', snippet_id=snippet_id, _external=True)
+        msg.body = f"Here's a link to the code snippet!\n\nTitle: {snippet.title}\n\nURL: {snippet_url}"
         mail.send(msg)
         flash(f'The snippet has been sent to {recipient_email}!')
         return redirect(url_for('snippets.snippet_detail', snippet_id=snippet_id))
